@@ -6,4 +6,5 @@ RUN apt-get -y clean \
 	&& curl -sL https://deb.nodesource.com/setup_4.x | bash - \
 	&& apt-get install -y nodejs \
 	&& npm install -g bower \
-	&& npm install -g gulp
+	&& npm install -g gulp \
+	&& rm -rf /var/lib/apt/lists/*

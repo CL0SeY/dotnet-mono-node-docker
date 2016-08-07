@@ -1,4 +1,4 @@
-FROM cl0sey/dotnet-mono-docker:inherit-curl
+FROM cl0sey/dotnet-mono-docker:dotnet-jessie-base
 
 RUN apt-get -y clean \
 	&& apt-get -y purge \

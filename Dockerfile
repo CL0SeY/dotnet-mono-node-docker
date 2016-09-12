@@ -8,3 +8,8 @@ RUN apt-get -y clean \
 	&& npm install -g bower \
 	&& npm install -g gulp \
 	&& rm -rf /var/lib/apt/lists/*
+
+# Fix https://github.com/npm/npm/issues/9863
+RUN cd $(npm root -g)/npm \
+  && npm install fs-extra \
+  && sed -i -e s/graceful-fs/fs-extra/ -e s/fs\.rename/fs.move/ ./lib/utils/rename.js

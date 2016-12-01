@@ -1,4 +1,4 @@
-FROM cl0sey/dotnet-mono-docker
+FROM cl0sey/dotnet-mono-docker:1.1-runtime
 
 RUN apt-get -y clean \
 	&& apt-get -y purge \
